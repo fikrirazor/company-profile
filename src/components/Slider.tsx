@@ -1,4 +1,8 @@
-"use client";
+
+import image1 from "@/assets/images/camera-6609535_1920.jpg"
+import image2 from "@/assets/images/bread-8420931_1920.jpg"
+import image3 from "@/assets/images/2dc6c641864a6d1fb671bab2e53d24a0.jpg"
+
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -9,19 +13,19 @@ import {
 
 const slides = [
   {
-    title: "Build Your Web Experience",
-    subtitle: "High performance, modern UI, and clean code.",
-    image: "https://images.unsplash.com/photo-1503264116251-35a269479413?q=80",
+    title: "INGGALKAN JEJAK VISUALMU",
+    subtitle: "Setiap brand punya cerita. Kami yang mengabadikannya dalam visual.",
+    image: image1,
   },
   {
-    title: "Creative Digital Solutions",
-    subtitle: "Crafting interfaces that users love.",
-    image: "https://images.unsplash.com/photo-1503264116251-35a269479413?q=80",
+    title: "DETAIL YANG BERBICARA",
+    subtitle: "Kami merangkai setiap elemen dengan ketelitian, dari konsep hingga hasil akhir.",
+    image: image2,
   },
   {
-    title: "Full-Stack Development",
-    subtitle: "From frontend to backend, I build it all.",
-    image: "https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80",
+    title: "VISUAL YANG MENGUBAH CERITA",
+    subtitle: "Tingkatkan engagement dan penjualan dengan konten yang menyentuh hati audiens.",
+    image: image3,
   },
 ];
 
