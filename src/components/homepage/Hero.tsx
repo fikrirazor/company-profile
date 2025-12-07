@@ -1,4 +1,4 @@
-import Slider from "./Slider"
+import Slider from "@/components/homepage/Slider"
 function Hero(){
     return(
         <section id="hero" className="Hero bg-black text-white relative">

@@ -1,18 +1,27 @@
-function services(){
-    return(
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <Card className="shadow-md">
-                <CardHeader>
-                    <CardTitle>Service 1</CardTitle>
-                    <CardDescription>Description of service 1</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p>Content of service 1</p>
-                </CardContent>
-            </Card>
-        </div>
+function Services() {
+  return (
+    <>
+      <section id="hero">
+        OUR SERVICES Visual Solutions for Local Brands Simple, clear, effective.
+      </section>
+      <section id="services">
 
-    )
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </section>
+      <section id="cta">
+        NEED VISUALS FOR YOUR BRAND? Get a free quote today. [WhatsApp Us] [See
+        Portfolio]
+      </section>
+    </>
+  );
 }
 
-export default Services
+export default Services;
