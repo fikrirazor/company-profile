@@ -5,7 +5,7 @@ function HomePage() {
     <div>
       <Navbar />
       <Hero />
-      {/* Company Overview */}
+      {/*  Overview */}
       <section
         id="company-overview"
         className="
@@ -16,7 +16,7 @@ function HomePage() {
     flex 
     items-center
   "
-   /*      style={{
+        /*      style={{
           backgroundImage: "url('/your-image.jpg')",
         }} */
       >
@@ -25,38 +25,80 @@ function HomePage() {
 
           <div className="flex flex-col items-end text-right">
             <h1 className="text-4xl font-bold mb-4 text-black">
-              Redefine your luxury
+              REDEFINE YOUR VISUAL IDENTITY <br />
+              <span>Elevate Your Brand Story</span>
             </h1>
             <p className="text-black max-w-sm">
-              Recognizing the profound shifts in the way people are living and
-              working, and the desire for a more sustainable lifestyle
+              Experience a transformative shift as we redefine visual
+              excellence, elevating your brand's narrative to new heights.
+              Immerse yourself in a world where every pixel tells a story, every
+              frame captures essence, and every visual is curated to exceed
+              market expectations—creating a legacy of memorable brand presence.
+              <br /> ◉ Visual Strategy Consulting <br />◉ Premium Content
+              Production
+              <br /> ◉ Brand Consistency Audit
             </p>
           </div>
         </div>
       </section>
+      {/*  Overview 2 */}
+      <section
+        id="company-overview2"
+        className="
+    relative 
+    h-screen 
+    w-full 
+    bg-cover bg-center 
+    flex 
+    items-center
+  "
+        /*      style={{
+          backgroundImage: "url('/your-image.jpg')",
+        }} */
+      >
+        <div className="grid w-full max-w-7xl mx-auto px-6 grid-cols-1 lg:grid-cols-2">
+          <div className="hidden lg:block"></div>
+
+          <div className="flex flex-col items-end text-right">
+            <h1 className="text-4xl font-bold mb-4 text-black">
+              YEARS OF VISUAL STORYTELLING
+              <br />
+              <span>Transforming Visions into Visual Reality </span>
+            </h1>
+            <p className="text-black max-w-sm">
+              With years of expertise and dedication, we have consistently
+              transformed brand visions into tangible visual assets. As we
+              continue to make creative aspirations come to life, turning
+              concepts into remarkable visual achievements that connect,
+              convert, and captivate.
+              <br /> ◉ Our Creative Journey <br />◉ Innovative Techniques
+              <br /> ◉ Industry Recognition <br />◉ Insights & Case Studies
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services/Product */}
       <section id="services">
-        Landed Residential – perumahan bersubsidi atau premium. Superblock &
-        Condominium – proyek terintegrasi dengan fasilitas lengkap. Shopping &
-        Trade Center – pusat perbelanjaan dan area komersial. Sports Center &
-        Recreation – fasilitas kebugaran, kolam renang, dll. Hotel – jaringan
-        hotel yang dikelola grup. Hospital – fasilitas kesehatan. Toll Road –
-        investasi infrastruktur transportasi.
+        <h2>
+          Our Signature Services Empowering Local Brands Through Visual
+          Excellence
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-1 md:grid-rows-4 gap-4">
+          <div>gambar1</div>
+          <div> gambar 2</div>
+          <div>gambar 3</div>
+          <div>gambar 4</div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">Video</div>
       </section>
       {/* Testimonials */}
       <section id="testimonials">
-        Testimony Since joining PT Jaya Real Property, Tbk. in 2005 as a fresh
-        graduate, I have been given lots of opportunities to be involved in
-        numerous property projects as Business Development Officer. A huge
-        amount of knowledge and business experience as well as learnings about
-        teamwork and leadership practices during my time in Jaya Real Property
-        has supported my career development as a complete and competent property
-        professional. Praditya Wibowo Testimony Manager For almost 10 years with
-        PT Jaya Real Property, Tbk., I have been given opportunities, trust,
-        support and also the space to develop myself to be who I am today. The
-        Company has given the opportunity, direction, as well as motivation for
-        younger generations to develop and expand their potential to be someone
-        resilient, caring and qualified.
+        <h2>Brands That Trust Our Vision</h2>
+        <h5>We've helped these amazing brands elevate their visual identity</h5>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"> 
+          <div>gambar</div>
+        </div>
       </section>
       {}
       {/*Footer*/}
