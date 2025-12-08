@@ -31,10 +31,10 @@ function CompanyOverview2() {
             captivate.
           </p>
           <div className="grid grid-cols-2 gap-2 text-white">
-            <div>◉ Our Creative Journey</div>
-            <div>◉ Innovative Techniques</div>
-            <div>◉ Industry Recognition</div>
-            <div>◉ Insights & Case Studies</div>
+            <div>Our Creative Journey</div>
+            <div>Innovative Techniques</div>
+            <div>Industry Recognition</div>
+            <div>Insights & Case Studies</div>
           </div>
         </div>
         <div></div>
