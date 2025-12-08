@@ -1,73 +1,90 @@
-# React + TypeScript + Vite
+```markdown
+# KARYAVISUAL - Company Profile Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Profil perusahaan digital untuk KARYAVISUAL, agensi kreatif yang dibangun dengan React + TailwindCSS + Zustand + Formik dan Yup.
 
-Currently, two official plugins are available:
+## 📋 Deskripsi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Website profil perusahaan yang menampilkan layanan, tim, dan portofolio KARYAVISUAL. Dibangun dengan teknologi modern menggunakan React, TypeScript, dan TailwindCSS.
 
-## React Compiler
+## 🚀 Fitur Utama
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design**: Tampil sempurna di semua perangkat
+- **Multi-page Layout**: Home, About, Services, Team, Blog
+- **Interactive Components**: Carousel, navigation, dan formulir
+- **Blog Management System**: Dengan fitur create dan read blog post
+- **Authentication**: Sistem login untuk admin blog
+- **Modern UI/UX**: Menggunakan TailwindCSS untuk desain yang menarik
 
-## Expanding the ESLint configuration
+## 🛠️ Teknologi yang Digunakan
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React + TypeScript
+- **Styling**: TailwindCSS
+- **Routing**: React Router
+- **State Management**: Zustand
+- **Form Handling**: Formik + Yup
+- **UI Components**: TailwindCSS
+- **Build Tool**: Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Struktur Proyek
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/          # Komponen UI reusable
+│   ├── homepage/       # Komponen khusus halaman home
+│   └── ui/            # Komponen UI dasar
+├── pages/             # Halaman utama website
+├── store/             # Manajemen state global
+├── assets/            # Gambar dan aset statis
+├── lib/               # Utility functions
+└── App.tsx            # Root aplikasi
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Halaman yang Tersedia
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Home** (`/`) - Landing page utama
+2. **About** (`/about`) - Tentang perusahaan dan sejarah
+3. **Services** (`/services`) - Layanan yang ditawarkan
+4. **Team** (`/teams`) - Profil tim kreatif
+5. **Blog** (`/blogs`) - Daftar artikel blog
+6. **Create Blog** (`/create-blog`) - Form pembuatan blog (admin only)
+7. **Login** (`/login`) - Halaman autentikasi admin
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔧 Instalasi
+
+1. Clone repository ini:
+```bash
+git clone <repository-url>
 ```
+
+2. Install dependencies:
+```bash
+npm install
+# atau
+yarn install
+```
+
+3. Jalankan development server:
+```bash
+npm run dev
+# atau
+yarn dev
+```
+
+4. Build untuk produksi:
+```bash
+npm run build
+# atau
+yarn build
+```
+
+## 📝 Catatan Pengembangan
+
+- Semua data blog disimpan di localStorage
+- Sistem autentikasi menggunakan state management
+- Data tim diambil dari API eksternal (randomuser.me)
+
+
+
+
+
