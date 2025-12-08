@@ -20,7 +20,7 @@ export default function BlogList() {
         {isAuth ? (
           <Link
             to="/create-blog"
-            className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition shadow-md hover:shadow-lg"
+            className="bg-blue text-white px-5 py-2.5 rounded-lg hover:bg-blue-200 transition shadow-md hover:shadow-lg"
           >
             + Tulis Blog
           </Link>
@@ -29,7 +29,7 @@ export default function BlogList() {
             to="/login"
             className="bg-gray-800 text-white px-5 py-2.5 rounded-lg hover:bg-gray-900 transition"
           >
-            Login untuk Tulis Blog
+            Login untuk Menulis Blog
           </Link>
         )}
       </div>
