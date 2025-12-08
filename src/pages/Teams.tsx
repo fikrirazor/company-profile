@@ -5,7 +5,7 @@ function Teams(){
                 
             </section>
             <section className="Team">
-
+                Loading team…
             </section>
         </div>
 
