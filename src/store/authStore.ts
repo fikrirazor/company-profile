@@ -1,22 +1,22 @@
-// src/store/authStore.ts
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-type AuthState = {
+type State = {
   isAuth: boolean;
   login: () => void;
   logout: () => void;
 };
 
-export const useAuthStore = create<AuthState>()(
+export const useAuthStore = create<State>()(
   persist(
     (set) => ({
       isAuth: false,
       login: () => set({ isAuth: true }),
-      logout: () => set({ isAuth: false }),
+      logout: () => set((state) => ({ ...state,  isAuth: false })),
     }),
     {
-      name: 'super-contar-auth',
+      name: 'karya-visual-auth',
+      partialize: (state) => ({ isAuth: state.isAuth}),
       storage: createJSONStorage(() => localStorage),
     }
   )
