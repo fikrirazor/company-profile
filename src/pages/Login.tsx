@@ -7,8 +7,8 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    login(); // simpan isAuth = true
-    navigate('/create-blog'); // langsung ke form blog
+    login(); 
+    navigate('/create-blog'); 
   };
 
   return (
@@ -20,7 +20,7 @@ export default function Login() {
         </p>
         <button
           onClick={handleLogin}
-          className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition font-medium"
+          className="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-900 transition font-medium"
         >
           Login as Admin
         </button>
