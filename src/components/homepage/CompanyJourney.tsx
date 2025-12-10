@@ -52,7 +52,7 @@ export default function CompanyJourney() {
           </p>
 
           {/* Feature Grid */}
-          <div className="grid grid-cols-3 gap-6 w-full max-w-xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-xl">
             {journeyFeatures.map((item, index) => (
               <div key={index} className="flex flex-col items-start group">
                 <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-3 group-hover:bg-primary transition-all duration-300">

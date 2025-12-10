@@ -9,14 +9,11 @@ function Services() {
         Our Signature Services Empowering
         <br /> Local Brands Through Visual Excellence
       </h2>
-      <div className="grid grid-rows-1 md:grid-cols-4 gap-4  ">
-        <img src={ImageService1} alt="service1" />
-
-        <img src={ImageService2} alt="service2" />
-
-        <img src={ImageService3} alt="service3" />
-
-        <img src={ImageService4} alt="service4" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+        <img src={ImageService1} alt="Visual Strategy" className="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+        <img src={ImageService2} alt="Production" className="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+        <img src={ImageService3} alt="Campaigns" className="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+        <img src={ImageService4} alt="Digital" className="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
       </div>
     </section>
   );
