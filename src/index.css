@@ -9,12 +9,12 @@
 
     /* Semantic Color Mapping (Grimbo Palette) */
     /* Primary: Dark Green - Earthy, Natural */
-    --color-primary: #596e47;
-    --color-primary-foreground: #dfe6e0;
+    --color-primary: #d9c277;
+    --color-primary-foreground: #222228;
 
     /* Secondary: Gold - Subtle Highlight */
-    --color-secondary: #d9c277;
-    --color-secondary-foreground: #222228;
+    --color-secondary: #596e47;
+    --color-secondary-foreground: #dfe6e0;
 
     /* Accent: Terracotta/Orange - Warmth */
     --color-accent: #c17b5c;

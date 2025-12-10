@@ -1,46 +1,61 @@
 import ImageOverview2 from "@/assets/images/camera-6609535_1920.jpg";
-function CompanyJourney() {
+import { PenTool, Globe, Award } from "lucide-react";
+
+const journeyFeatures = [
+  { title: "Creative Journey", icon: PenTool },
+  { title: "Global Reach", icon: Globe },
+  { title: "Industry Awards", icon: Award }
+];
+
+export default function CompanyJourney() {
   return (
     <section
       id="company-journey"
-      className="relative h-screen w-full flex items-center overflow-hidden"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      {/* BG */}
-      <img
-        src={ImageOverview2}
-        alt="Company Overview2"
-        className="absolute inset-0 w-full h-full object-cover"
+      {/* Background Image */}
+      {/* Background Image - Parallax Effect */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${ImageOverview2})` }}
       />
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-surface-dark/60" />
 
-      {/* BG Blur */}
-      <div className="absolute inset-0 w-full h-full  backdrop-blur-sm"></div>
-
-      {/* Content Menggunakan Grid*/}
-      <div className="relative w-full max-w-7xl mx-auto px-4 z-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="max-w-xl">
-          <h1 className="text-4xl font-bold mb-4 text-text-light">
-            YEARS OF VISUAL STORYTELLING
-            <br />
-            <span>Transforming Visions into Visual Reality</span>
+      {/* Centered Content -> Left Aligned Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center h-full">
+        {/* Left Side Content */}
+        <div className="flex flex-col items-start justify-center h-full text-left text-text-light animate__animated animate__fadeInLeft">
+          
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+            YEARS OF <br />
+            <span className="text-primary">VISUAL STORYTELLING</span>
           </h1>
-          <p className="text-text-light mb-4">
-            With years of expertise and dedication, we have consistently
-            transformed brand visions into tangible visual assets. As we
-            continue to make creative aspirations come to life, turning concepts
-            into remarkable visual achievements that connect, convert, and
-            captivate.
+
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl font-body opacity-90 mb-10 max-w-xl">
+            Transforming brand visions into tangible visual assets. We turn creative 
+            aspirations into remarkable achievements that connect, convert, and captivate.
           </p>
-          <div className="grid grid-cols-2 gap-2 text-text-light">
-            <div>Our Creative Journey</div>
-            <div>Innovative Techniques</div>
-            <div>Industry Recognition</div>
-            <div>Insights & Case Studies</div>
+
+          {/* Feature Grid */}
+          <div className="grid grid-cols-3 gap-6 w-full max-w-xl">
+            {journeyFeatures.map((item, index) => (
+              <div key={index} className="flex flex-col items-start group">
+                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-3 group-hover:bg-primary transition-all duration-300">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-sm md:text-base font-bold font-sans tracking-wide uppercase">{item.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
-        <div></div>
+
+        {/* Empty Right Side */}
+        <div className="hidden lg:block"></div>
       </div>
     </section>
   );
 }
-
-export default CompanyJourney;
