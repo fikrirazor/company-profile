@@ -1,6 +1,7 @@
 import image1 from "@/assets/images/camera-6609535_1920.jpg";
 import image2 from "@/assets/images/bread-8420931_1920.jpg";
 import image3 from "@/assets/images/2dc6c641864a6d1fb671bab2e53d24a0.jpg";
+import AnimatedContent from "@/components/AnimatedContent";
 
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -61,12 +62,26 @@ function Slider() {
               </div>
               <div className="absolute inset-0 bg-surface-dark/50" />
               <div className="relative z-10 text-center text-text-light px-4 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
-                  {slide.title}
-                </h1>
-                <p className="text-xl md:text-2xl font-body opacity-90">
-                  {slide.subtitle}
-                </p>
+                <AnimatedContent
+                  distance={160}
+                  direction="vertical"
+                  reverse={false}
+                  duration={1.5}
+                  ease="bounce.out"
+                  initialOpacity={0.2}
+                  animateOpacity
+                  scale={1}
+                  threshold={0.3}
+                  delay={0.3}
+                  disappearEase="power3.in"
+                >
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-2xl font-body opacity-90">
+                    {slide.subtitle}
+                  </p>
+                </AnimatedContent>
               </div>
             </CarouselItem>
           ))}
