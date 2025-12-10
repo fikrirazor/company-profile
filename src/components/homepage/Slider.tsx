@@ -10,6 +10,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { Button } from "../ui/button";
 
 const slides = [
   {
@@ -81,6 +82,19 @@ function Slider() {
                   <p className="text-xl md:text-2xl font-body opacity-90">
                     {slide.subtitle}
                   </p>
+                  <div className="mt-8">
+                    <a href="#services">
+                      <Button
+                        size="xl"
+                        className="bg-transparent text-text-light  border border-text-light/50 hover:bg-surface-dark/50 hover:text-text-light font-bold px-8 py-6 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 group"
+                      >
+                        See Our Product{" "}
+                        <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                          &gt;
+                        </span>
+                      </Button>
+                    </a>
+                  </div>
                 </AnimatedContent>
               </div>
             </CarouselItem>
