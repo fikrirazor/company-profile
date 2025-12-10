@@ -1,5 +1,6 @@
 import ImageOverview from "@/assets/images/nature-6572635_1920.jpg";
 import { ScanEye, Clapperboard, ClipboardCheck } from "lucide-react";
+import AnimatedContent from "@/components/AnimatedContent";
 
 const featureText = [
   { title: "Visual Strategy", icon: ScanEye },
@@ -27,7 +28,17 @@ export default function BrandIdentity() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center h-full">
         {/* Empty Left Side */}
         <div className="hidden lg:block"></div>
-
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={false} 
+            duration={1.5}
+            ease="bounce.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1}
+            threshold={0.1}
+          >
         {/* Right Side Content */}
         <div className="flex flex-col items-start justify-center h-full text-left text-text-light animate__animated animate__fadeInRight">
           
@@ -55,6 +66,7 @@ export default function BrandIdentity() {
             ))}
           </div>
         </div>
+        </AnimatedContent>
       </div>
     </section>
   );

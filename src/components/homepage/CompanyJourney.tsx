@@ -1,5 +1,6 @@
 import ImageOverview2 from "@/assets/images/camera-6609535_1920.jpg";
 import { PenTool, Globe, Award } from "lucide-react";
+import AnimatedContent from "@/components/AnimatedContent";
 
 const journeyFeatures = [
   { title: "Creative Journey", icon: PenTool },
@@ -26,8 +27,18 @@ export default function CompanyJourney() {
       {/* Centered Content -> Left Aligned Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center h-full">
         {/* Left Side Content */}
-        <div className="flex flex-col items-start justify-center h-full text-left text-text-light animate__animated animate__fadeInLeft">
-          
+        <div className="flex flex-col items-start justify-center h-full text-left text-text-light">
+          <AnimatedContent
+            distance={150}
+            direction="horizontal"
+            reverse={true} 
+            duration={1.5}
+            ease="bounce.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1}
+            threshold={0.1}
+          >
           {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
             YEARS OF <br />
@@ -51,6 +62,7 @@ export default function CompanyJourney() {
               </div>
             ))}
           </div>
+          </AnimatedContent>
         </div>
 
         {/* Empty Right Side */}

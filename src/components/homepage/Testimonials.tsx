@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import AnimatedContent from "@/components/AnimatedContent";
 
 const testimonyItems = [
   {
@@ -26,6 +27,17 @@ function Testimonials() {
     <section id="testimonials" className="px-6 py-20 min-h-[80vh] bg-surface-dark flex items-center">
       <div className="max-w-7xl mx-auto text-text-light w-full">
         {/* Title */}
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={false}
+          duration={1.5}
+          ease="bounce.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1}
+          threshold={0.1}
+        >
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 font-sans">
             Trusted by Visionaries
@@ -40,8 +52,7 @@ function Testimonials() {
           {testimonyItems.map((item, index) => (
             <div 
               key={index} 
-              className="bg-background rounded-2xl p-8 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 shadow-xl animate__animated animate__fadeInUp"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="bg-background rounded-2xl p-8 flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300 shadow-xl"
             >
               {/* Quote Icon & Text */}
               <div>
@@ -68,6 +79,7 @@ function Testimonials() {
             </div>
           ))}
         </div>
+        </AnimatedContent>
       </div>
     </section>
   );
