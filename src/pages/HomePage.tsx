@@ -7,7 +7,7 @@ import Testimonials from "@/components/homepage/Testimonials";
 
 function HomePage() {
   return (
-    <div>
+    <div className="bg-background min-h-screen text-text-main">
 
       <Hero />
       <BrandIdentity />

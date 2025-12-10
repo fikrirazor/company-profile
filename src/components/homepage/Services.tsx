@@ -5,7 +5,7 @@ import ImageService4 from "@/assets/images/image-serv4.jpg";
 function Services() {
   return (
     <section id="services " className="max-w-7xl mx-auto py-10">
-      <h2 className="text-center text-4xl font-bold my-10">
+      <h2 className="text-center text-4xl font-bold my-10 text-text-main">
         Our Signature Services Empowering
         <br /> Local Brands Through Visual Excellence
       </h2>

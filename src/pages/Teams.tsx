@@ -48,12 +48,12 @@ function Teams() {
 
   return (
     <div>
-      <section className="hero py-20 bg-black bg-opacity-50">
+      <section className="hero py-20 bg-surface-dark/50">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-text-light mb-6">
             OUR CREATIVE TEAM
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-text-muted">
             Behind every great visual story is a team of passionate creators dedicated to bringing brands to life.
           </p>
         </div>
@@ -83,8 +83,8 @@ function Teams() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">{member.name}</h3>
-                    <p className="text-gray-600 mb-3">{member.position}</p>
-                    <p className="italic text-gray-700">"{member.quote}"</p>
+                    <p className="text-text-muted mb-3">{member.position}</p>
+                    <p className="italic text-text-main">"{member.quote}"</p>
                   </div>
                 </div>
               ))}
@@ -93,7 +93,7 @@ function Teams() {
         </div>
       </section>
 
-      <section className="culture py-20 bg-[#121212]/90 text-white">
+      <section className="culture py-20 bg-surface-dark/90 text-text-light">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-8">Our Culture & Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

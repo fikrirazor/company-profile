@@ -12,21 +12,18 @@ import {
 
 const slides = [
   {
-    title: "INGGALKAN JEJAK VISUALMU",
-    subtitle:
-      "Setiap brand punya cerita. Kami yang mengabadikannya dalam visual.",
+    title: "LEAVE YOUR VISUAL MARK",
+    subtitle: "Every brand has a story. We capture it visually.",
     image: image1,
   },
   {
-    title: "DETAIL YANG BERBICARA",
-    subtitle:
-      "Kami merangkai setiap elemen dengan ketelitian, dari konsep hingga hasil akhir.",
+    title: "DETAILS THAT SPEAK",
+    subtitle: "We meticulously craft every element, from concept to final result.",
     image: image2,
   },
   {
-    title: "VISUAL YANG MENGUBAH CERITA",
-    subtitle:
-      "Tingkatkan engagement dan penjualan dengan konten yang menyentuh hati audiens.",
+    title: "VISUALS THAT TRANSFORM STORIES",
+    subtitle: "Increase engagement and sales with content that touches the audience's heart.",
     image: image3,
   },
 ];
@@ -40,10 +37,10 @@ function Slider() {
   );
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden ">
       <Carousel
         plugins={[plugin.current]}
-        opts={{ 
+        opts={{
           loop: true,
           align: "center"
         }}
@@ -56,18 +53,18 @@ function Slider() {
               className="relative w-full min-h-screen flex items-center justify-center p-0"
             >
               <div className="absolute inset-0 w-full h-full">
-                <img 
-                  src={slide.image} 
+                <img
+                  src={slide.image}
                   alt={slide.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute inset-0 bg-black/50" />
-              <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <div className="absolute inset-0 bg-surface-dark/50" />
+              <div className="relative z-10 text-center text-text-light px-4 max-w-4xl mx-auto">
+                <h1 className=" text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl opacity-90">
+                <p className="text-xl md:text-2xl  opacity-90">
                   {slide.subtitle}
                 </p>
               </div>

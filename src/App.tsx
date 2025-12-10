@@ -14,7 +14,7 @@ function App() {
   return (
     <React.Fragment>
       <Header/>
-      <main className="flex-grow">
+      <main className="flex-grow font-sans">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />

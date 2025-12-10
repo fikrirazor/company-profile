@@ -7,20 +7,20 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    login(); 
-    navigate('/create-blog'); 
+    login();
+    navigate('/create-blog');
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-500">
-      <div className="text-center p-8 bg-white rounded-lg shadow-md max-w-md w-full">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">Admin Access</h1>
-        <p className="text-gray-600 mb-6">
+    <div className="min-h-screen flex items-center justify-center bg-surface-dark">
+      <div className="text-center p-8 bg-surface rounded-lg shadow-md max-w-md w-full">
+        <h1 className="text-2xl font-bold text-text-main mb-4">Admin Access</h1>
+        <p className="text-text-muted mb-6">
           Klik di bawah untuk masuk sebagai admin dan mengelola blog.
         </p>
         <button
           onClick={handleLogin}
-          className="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-900 transition font-medium"
+          className="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:bg-teal-dark transition font-medium"
         >
           Login as Admin
         </button>

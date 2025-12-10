@@ -20,11 +20,11 @@ function BrandIdentity() {
         <div className="flex-1"></div>
 
         <div className="flex-1 max-w-xl">
-          <h1 className="text-4xl font-bold mb-4 text-white pb-2">
+          <h1 className="text-4xl font-bold mb-4 text-text-light pb-2">
             REDEFINE YOUR VISUAL IDENTITY <br />
             <span className="text-2xl">Elevate Your Brand Story</span>
           </h1>
-          <p className="text-white pb-2">
+          <p className="text-text-light pb-2">
             Experience a transformative shift as we redefine visual excellence,
             elevating your brand's narrative to new heights. Immerse yourself in
             a world where every pixel tells a story, every frame captures
@@ -32,9 +32,9 @@ function BrandIdentity() {
             creating a legacy of memorable brand presence.
           </p>
           <ul className="space-y-2">
-            <li className="text-white">Visual Strategy Consulting</li>
-            <li className="text-white">Premium Content Production</li>
-            <li className="text-white">Brand Consistency Audit</li>
+            <li className="text-text-light">Visual Strategy Consulting</li>
+            <li className="text-text-light">Premium Content Production</li>
+            <li className="text-text-light">Brand Consistency Audit</li>
           </ul>
         </div>
       </div>

@@ -1,4 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+@theme {
+    /* Fonts */
+    --font-sans: "Plus Jakarta Sans", sans-serif;
+    
+
+    /* Semantic Color Mapping (Grimbo Palette) */
+    /* Primary: Dark Green - Earthy, Natural */
+    --color-primary: #596e47;
+    --color-primary-foreground: #dfe6e0;
+
+    /* Secondary: Gold - Subtle Highlight */
+    --color-secondary: #d9c277;
+    --color-secondary-foreground: #222228;
+
+    /* Accent: Terracotta/Orange - Warmth */
+    --color-accent: #c17b5c;
+
+    /* Backgrounds & Surface */
+    --color-background: #dfe6e0;
+    /* Light Grey/Greenish */
+    --color-surface: #a9bbcc;
+    /* Light Blue/Grey - for cards */
+    --color-surface-dark: #222228;
+    /* Almost Black */
+
+    /* Text */
+    --color-text-main: #222228;
+    /* Almost Black */
+    --color-text-muted: #444a65;
+    /* Dark Blue */
+    --color-text-light: #dfe6e0;
+    /* Light */
+
+    /* Status */
+    --color-success: #9ba15f;
+    /* Olive */
+    --color-error: #85444a;
+    /* Reddish Brown */
+    --color-info: #7687ab;
+    /* Blue Grey */
+}

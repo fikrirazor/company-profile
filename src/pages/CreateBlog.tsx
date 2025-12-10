@@ -17,7 +17,7 @@ export default function CreateBlog() {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto bg-gray-500 py-20 max-w-screen-2xl px-4 min-h-screen">
+    <div className="container mx-auto bg-surface-dark/90 py-20 max-w-screen-2xl px-4 min-h-screen text-text-light">
       <h1 className="text-3xl font-bold text-center mb-6">Buat Blog Baru</h1>
       <Formik
         initialValues={{ title: '', content: '' }}
@@ -70,14 +70,14 @@ export default function CreateBlog() {
           <div className="flex gap-3">
             <button
               type="submit"
-              className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
+              className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-teal-dark transition"
             >
               Publikasikan
             </button>
             <button
               type="button"
               onClick={() => navigate('/blogs')}
-              className="border border-gray-400 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-100 transition"
+              className="border border-text-muted text-text-muted px-6 py-2 rounded-lg hover:bg-surface transition"
             >
               Batal
             </button>
