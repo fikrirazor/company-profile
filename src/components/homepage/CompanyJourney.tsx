@@ -1,8 +1,8 @@
 import ImageOverview2 from "@/assets/images/camera-6609535_1920.jpg";
-function CompanyOverview2() {
+function CompanyJourney() {
   return (
     <section
-      id="company-overview2"
+      id="company-journey"
       className="relative h-screen w-full flex items-center overflow-hidden"
     >
       {/* BG */}
@@ -43,4 +43,4 @@ function CompanyOverview2() {
   );
 }
 
-export default CompanyOverview2;
+export default CompanyJourney;

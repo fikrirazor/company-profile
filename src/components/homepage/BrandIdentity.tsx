@@ -1,8 +1,8 @@
 import ImageOverview from "@/assets/images/nature-6572635_1920.jpg";
-function CompanyOverview() {
+function BrandIdentity() {
   return (
     <section
-      id="company-overview"
+      id="brand-identity"
       className="relative h-screen w-full flex items-center overflow-hidden"
     >
       {/* Background Image */}
@@ -42,4 +42,4 @@ function CompanyOverview() {
   );
 }
 
-export default CompanyOverview;
+export default BrandIdentity;
