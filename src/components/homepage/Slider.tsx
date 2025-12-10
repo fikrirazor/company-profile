@@ -85,7 +85,7 @@ function Slider() {
                   <div className="mt-8">
                     <a href="#services">
                       <Button
-                        size="xl"
+                        variant="link"
                         className="bg-transparent text-text-light  border border-text-light/50 hover:bg-surface-dark/50 hover:text-text-light font-bold px-8 py-6 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 group"
                       >
                         See Our Product{" "}
