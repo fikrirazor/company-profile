@@ -61,10 +61,10 @@ function Slider() {
               </div>
               <div className="absolute inset-0 bg-surface-dark/50" />
               <div className="relative z-10 text-center text-text-light px-4 max-w-4xl mx-auto">
-                <h1 className=" text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl  opacity-90">
+                <p className="text-xl md:text-2xl font-body opacity-90">
                   {slide.subtitle}
                 </p>
               </div>
