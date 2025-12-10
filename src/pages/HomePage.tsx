@@ -1,5 +1,4 @@
 import Hero from "../components/homepage/Hero";
-
 import CompanyJourney from "@/components/homepage/CompanyJourney";
 import BrandIdentity from "@/components/homepage/BrandIdentity";
 import Services from "@/components/homepage/Services";

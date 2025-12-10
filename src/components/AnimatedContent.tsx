@@ -22,7 +22,6 @@ interface AnimatedContentProps extends React.HTMLAttributes<HTMLDivElement> {
   disappearEase?: string;
   onComplete?: () => void;
   onDisappearanceComplete?: () => void;
-  toggleActions?: string;
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
@@ -43,7 +42,6 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   disappearEase = 'power3.in',
   onComplete,
   onDisappearanceComplete,
-  toggleActions,
   className = '',
   ...props
 }) => {
@@ -101,14 +99,8 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       trigger: el,
       scroller: scrollerTarget || window,
       start: `top ${startPct}%`,
-      ...(toggleActions ? {
-        animation: tl,
-        toggleActions: toggleActions,
-        once: false,
-      } : {
-        once: true,
-        onEnter: () => tl.play()
-      })
+      once: true,
+      onEnter: () => tl.play()
     });
 
     return () => {
