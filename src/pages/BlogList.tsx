@@ -15,7 +15,6 @@ export default function BlogList() {
       <div className="flex justify-between items-center mb-10">
         <h1 className="text-4xl font-bold text-text-light">Blog</h1>
 
-        {/* Tampilkan tombol berbeda tergantung status login */}
         {user ? (
           <Link
             to="/create-blog"

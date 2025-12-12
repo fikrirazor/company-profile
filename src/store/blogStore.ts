@@ -1,10 +1,8 @@
 import { create } from 'zustand';
 import { AxiosInstance } from "@/utils/axios-instance";
 
-
-
 export type BlogPost = {
-  objectId: string; // Backendless uses objectId
+  objectId: string; 
   title: string;
   content: string; 
   author: string;
@@ -41,7 +39,6 @@ export const useBlogStore = create<BlogStore>((set) => ({
     try {
         const response = await AxiosInstance.post("/data/blogs", blog);
         
-        // Optimistic update or refresh
         const newBlog = response.data as BlogPost;
         set((state) => ({ 
             blogs: [newBlog, ...state.blogs],
