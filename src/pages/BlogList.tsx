@@ -1,10 +1,15 @@
 import { useBlogStore } from '@/store/blogStore';
 import { useUserStore } from '@/store/user-store';
 import { Link } from 'react-router';
+import { useEffect } from 'react';
 
 export default function BlogList() {
-  const { blogs } = useBlogStore();
+  const { blogs, fetchBlogs } = useBlogStore();
   const { user } = useUserStore();
+
+  useEffect(() => {
+    fetchBlogs();
+  }, [fetchBlogs]);
 
   const sortedBlogs = [...blogs].sort(
     (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
