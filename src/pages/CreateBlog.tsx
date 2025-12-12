@@ -3,6 +3,9 @@ import * as Yup from 'yup';
 import { useBlogStore } from '@/store/blogStore';
 import { useNavigate } from 'react-router';
 
+import { useUserStore } from '@/store/user-store';
+import { useEffect } from 'react';
+
 const validationSchema = Yup.object({
   title: Yup.string()
     .min(5, 'Judul terlalu pendek (min 5 karakter)')
@@ -14,7 +17,16 @@ const validationSchema = Yup.object({
 
 export default function CreateBlog() {
   const { addBlog } = useBlogStore();
+  const { user } = useUserStore();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+        navigate('/login');
+    }
+  }, [user, navigate]);
+
+  if (!user) return null;
 
   return (
     <div className="container mx-auto bg-surface-dark/90 py-20 max-w-screen-2xl px-4 min-h-screen text-text-light">

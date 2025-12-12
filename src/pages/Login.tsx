@@ -1,33 +1,48 @@
-// src/pages/Login.tsx
-import { useAuthStore } from '@/store/authStore';
-import { useNavigate } from 'react-router';
+import { useRef, useEffect } from "react";
+import { Input, Button, Toaster } from "@/components/ui";
+import { useUserStore } from "@/store/user-store";
+import { useNavigate } from "react-router";
 
 export default function Login() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
-  const { loading, login } 
-  const { login } = useAuthStore();
+  const { loading, login, user } = useUserStore();
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    login();
-    navigate('/create-blog');
-  };
+  useEffect(() => {
+    if (user) {
+        navigate("/create-blog");
+    }
+  }, [user, navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-surface-dark">
-      <div className="text-center p-8 bg-surface rounded-lg shadow-md max-w-md w-full">
-        <h1 className="text-2xl font-bold text-text-main mb-4">Admin Access</h1>
-        <p className="text-text-muted mb-6">
-          Klik di bawah untuk masuk sebagai admin dan mengelola blog.
-        </p>
-        <button
-          onClick={handleLogin}
-          className="w-full bg-primary text-primary-foreground py-3 rounded-lg hover:bg-teal-dark transition font-medium"
+    <main id="login-container" className="w-full min-h-screen bg-gray-200 flex items-center justify-center">
+      <div className="p-8 bg-white rounded-lg shadow-md max-w-sm w-full flex flex-col gap-4">
+        <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
+        <div className="flex flex-col gap-2">
+            <Input ref={emailRef} type="email" placeholder="ex. user@gmail.com" />
+            <Input ref={passwordRef} type="password" placeholder="Password" />
+        </div>
+        <Button
+          disabled={loading}
+          onClick={() => {
+            if (!emailRef.current || !passwordRef.current) return;
+            if (
+              emailRef.current.value.trim() === "" ||
+              passwordRef.current.value.trim() === ""
+            )
+              return;
+            login({
+              login: emailRef.current.value,
+              password: passwordRef.current.value,
+            });
+          }}
+          className="w-full"
         >
-          Login as Admin
-        </button>
+          {loading ? "Logging in..." : "Login"}
+        </Button>
       </div>
-    </div>
+      <Toaster />
+    </main>
   );
 }

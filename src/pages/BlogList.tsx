@@ -1,11 +1,10 @@
-// src/pages/BlogList.tsx
 import { useBlogStore } from '@/store/blogStore';
-import { useAuthStore } from '@/store/authStore';
+import { useUserStore } from '@/store/user-store';
 import { Link } from 'react-router';
 
 export default function BlogList() {
   const { blogs } = useBlogStore();
-  const { isAuth } = useAuthStore();
+  const { user } = useUserStore();
 
   const sortedBlogs = [...blogs].sort(
     (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
@@ -17,7 +16,7 @@ export default function BlogList() {
         <h1 className="text-4xl font-bold text-text-light">Blog</h1>
 
         {/* Tampilkan tombol berbeda tergantung status login */}
-        {isAuth ? (
+        {user ? (
           <Link
             to="/create-blog"
             className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg hover:bg-teal-dark transition shadow-md hover:shadow-lg"
@@ -42,7 +41,7 @@ export default function BlogList() {
       ) : (
         <div className="space-y-10">
           {sortedBlogs.map((blog) => (
-            <article key={blog.id} className="group pb-8 border-b border-text-muted last:border-0">
+            <article key={blog.objectId} className="group pb-8 border-b border-text-muted last:border-0">
               <h2 className="text-2xl font-bold text-text-light group-hover:text-secondary transition-colors">
                 {blog.title}
               </h2>

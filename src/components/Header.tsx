@@ -1,11 +1,11 @@
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router"; 
-import { useAuthStore } from "@/store/authStore"; 
+import { useUserStore } from "@/store/user-store"; 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isAuth, logout } = useAuthStore();
+  const { user, logout } = useUserStore();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -70,7 +70,7 @@ function Header() {
           ))}
 
           {/* Logout hanya muncul jika login */}
-          {isAuth && (
+          {user && (
             <button
               onClick={handleLogout}
               className="block md:inline-block px-3 py-3 text-white hover:text-red-400 transition-colors duration-200 text-left md:text-center"
