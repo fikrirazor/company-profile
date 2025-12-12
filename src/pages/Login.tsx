@@ -3,6 +3,9 @@ import { useAuthStore } from '@/store/authStore';
 import { useNavigate } from 'react-router';
 
 export default function Login() {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+  const { loading, login } 
   const { login } = useAuthStore();
   const navigate = useNavigate();
 
