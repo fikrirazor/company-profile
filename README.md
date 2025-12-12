@@ -6,6 +6,15 @@ Profil perusahaan digital untuk KARYAVISUAL, agensi kreatif yang dibangun dengan
 
 Website profil perusahaan yang menampilkan layanan, tim, dan portofolio KARYAVISUAL. Dibangun dengan teknologi modern menggunakan React, TypeScript, dan TailwindCSS.
 
+## 🔐 Login Credentials (Testing)
+
+Untuk mengakses fitur admin blog, gunakan kredensial berikut:
+
+- **Email**: test@test.com
+- **Password**: test
+
+Setelah login, Anda dapat mengakses halaman Create Blog untuk membuat artikel baru.
+
 ## 🚀 Fitur Utama
 
 - **Responsive Design**: Tampil sempurna di semua perangkat
@@ -87,11 +96,4 @@ yarn build
 - Sistem autentikasi menggunakan state management
 - Data tim diambil dari API eksternal (randomuser.me)
 
-## 🔐 Login Credentials (Testing)
 
-Untuk mengakses fitur admin blog, gunakan kredensial berikut:
-
-- **Email**: test@test.com
-- **Password**: test
-
-Setelah login, Anda dapat mengakses halaman Create Blog untuk membuat artikel baru.
