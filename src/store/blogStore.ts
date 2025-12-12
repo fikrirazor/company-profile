@@ -1,35 +1,52 @@
-// src/store/blogStore.ts
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+import { AxiosInstance } from "@/utils/axios-instance";
 
 export type BlogPost = {
-  id: string;
+  objectId: string; 
   title: string;
   content: string; 
   author: string;
   publishDate: string; 
+  created: number;
 };
 
 type BlogStore = {
   blogs: BlogPost[];
-  addBlog: (blog: Omit<BlogPost, 'id'>) => void;
+  loading: boolean;
+  error: string | null;
+  fetchBlogs: () => Promise<void>;
+  addBlog: (blog: { title: string; content: string; author: string; publishDate: string }) => Promise<void>;
 };
 
-export const useBlogStore = create<BlogStore>()(
-  persist(
-    (set) => ({
-      blogs: [],
-      addBlog: (blog) =>
-        set((state) => ({
-          blogs: [
-            ...state.blogs,
-            { ...blog, id: Date.now().toString() },
-          ],
-        })),
-    }),
-    {
-      name: 'blogs',
-      storage: createJSONStorage(() => localStorage),
+export const useBlogStore = create<BlogStore>((set) => ({
+  blogs: [],
+  loading: false,
+  error: null,
+  
+  fetchBlogs: async () => {
+      set({ loading: true, error: null });
+      try {
+          const response = await AxiosInstance.get("/data/blogs");
+          set({ blogs: response.data, loading: false });
+      } catch (err) {
+          console.error(err);
+          set({ error: "Failed to fetch blogs", loading: false });
+      }
+  },
+
+  addBlog: async (blog) => {
+    set({ loading: true, error: null });
+    try {
+        const response = await AxiosInstance.post("/data/blogs", blog);
+        
+        const newBlog = response.data as BlogPost;
+        set((state) => ({ 
+            blogs: [newBlog, ...state.blogs],
+            loading: false 
+        }));
+    } catch (err) {
+        console.error(err);
+        set({ error: "Failed to create blog", loading: false });
     }
-  )
-);
+  },
+}));

@@ -1,4 +1,3 @@
-
 # KARYAVISUAL - Company Profile Website
 
 Profil perusahaan digital untuk KARYAVISUAL, agensi kreatif yang dibangun dengan React + TailwindCSS + Zustand + Formik dan Yup.
@@ -53,11 +52,13 @@ src/
 ## 🔧 Instalasi
 
 1. Clone repository ini:
+
 ```bash
 git clone <repository-url>
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # atau
@@ -65,6 +66,7 @@ yarn install
 ```
 
 3. Jalankan development server:
+
 ```bash
 npm run dev
 # atau
@@ -72,6 +74,7 @@ yarn dev
 ```
 
 4. Build untuk produksi:
+
 ```bash
 npm run build
 # atau
@@ -84,7 +87,11 @@ yarn build
 - Sistem autentikasi menggunakan state management
 - Data tim diambil dari API eksternal (randomuser.me)
 
+## 🔐 Login Credentials (Testing)
 
+Untuk mengakses fitur admin blog, gunakan kredensial berikut:
 
+- **Email**: test@test.com
+- **Password**: test
 
-
+Setelah login, Anda dapat mengakses halaman Create Blog untuk membuat artikel baru.

@@ -1,4 +1,3 @@
-// src/pages/Teams.tsx
 import { useState, useEffect } from 'react';
 
 interface TeamMember {
@@ -9,7 +8,6 @@ interface TeamMember {
   image: string;
 }
 
-// Predefined quotes for team members
 const TEAM_QUOTES = [
   "Visual yang baik tidak hanya cantik, tapi juga cerdas.",
   "Cahaya adalah bahasa pertama fotografi.",
